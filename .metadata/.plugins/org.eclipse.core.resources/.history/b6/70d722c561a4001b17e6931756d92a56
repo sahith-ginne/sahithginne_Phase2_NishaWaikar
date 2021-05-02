@@ -1,0 +1,57 @@
+package com.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Set;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dao.FlyawayDao;
+import com.dao.FlyawayDaoImpl;
+import com.dto.flights;
+
+
+public class Flyaway extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  
+	
+	String uname= request.getParameter("uname");
+	
+	PrintWriter out=response.getWriter();
+	out.println("<html>");
+	out.println("<body>");
+	out.println("hello");
+	out.println("<form class= 'search' action='http://localhost:8080/Flyaway/Ticket_conformation ' method='post'>");
+	out.println("<label for='search'><b>Flights</b></label>");
+	out.println("<input type='text' placeholder='From' name='search'>");
+	out.println("<input type='text' placeholder='to' name='to'></br></br>");
+	out.println("<label for='Passengers'><b>No. of Passengers</b></label>");
+	out.println("<input type='text' placeholder=' ' style='max-width:40px; max-height:40px'></br></br>");
+
+	out.println("<label for='date'></label>");
+	out.println("<input type='date' id='date'placeholder='Date of Journey'>");
+	out.println("<input type='date' id='date' placeholder='Date of Return(optional)'></br></br>");
+	out.println("<button type='submit'>Go</button>");
+
+	out.println("</form>");
+	out.println("</body>");
+	out.println("</html>");
+}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		//doGet(request, response);
+		FlyawayDao obj = new FlyawayDaoImpl();
+		Set<flights> fdata = obj.getAllflights();
+		System.out.println(fdata.toString());
+		RequestDispatcher rs = request.getRequestDispatcher("index.html");
+		rs.forward(request, response);
+	}
+
+}

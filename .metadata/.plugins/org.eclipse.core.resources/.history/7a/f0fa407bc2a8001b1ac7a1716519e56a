@@ -1,0 +1,15 @@
+package com.dao;
+
+import java.util.Set;
+
+import com.dto.flights;
+
+public interface FlyawayDao {
+	
+	public boolean addflights(flights flights);
+	public boolean updateflights(String airlines, String city);
+	public boolean deleteflights(String airlines);
+	public flights searchflights(String airlines);
+	public Set<flights> getAllflights();
+
+}

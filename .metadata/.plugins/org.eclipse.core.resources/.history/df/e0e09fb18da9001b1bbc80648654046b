@@ -1,0 +1,52 @@
+package Flyawaydao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Set;
+
+import Flyawaydto.Flyaway;
+import Databaseconnection.ConnectionManager;
+import Databaseconnection.ConnectionManagerImpl;
+
+public class FlyawayDaoImpl implements FlyawayDao{
+	private Connection connection;
+	
+	public FlyawayDaoImpl() {
+		connection = new ConnectionManagerImpl().getConnection();
+	}
+
+	@Override
+	public boolean addFlyaway(Flyaway flyaway) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean updateFlyaway(String Airlines, String Arival, String Departure) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteFlyaway(String Airlines, String Arival, String Departure) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Flyaway searchFlyaway(Flyaway, flyaway) {
+		boolean IsFlyawayRecordInserted= false;
+		String Airlines =
+		return null;
+	}
+
+	@Override
+	public Set<Flyaway> getAllFlyaway() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	 
+	    }

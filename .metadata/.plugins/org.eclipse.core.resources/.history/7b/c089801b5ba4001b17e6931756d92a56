@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="signin.css">
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<form class='search'
+			action='http://localhost:8080/Flyaway/Ticket_conformation '
+			method='post'>
+			<label for='search'><b>Flights</b></label> <input type='text'
+				placeholder='From' name='search'> <input type='text'
+				placeholder='to' name='to'><br> <label for='Passengers'><b>No.
+					of Passengers</b></label> <input type='text' placeholder=' '
+				style='max-width: 40px; max-height: 40px'><br> <br>
+			<label for='date'></label> <input type='date' id='date'
+				placeholder='Date of Journey'>"); <input type='date'
+				id='date' placeholder='Date of Return(optional)'><br> <br>
+			<button type='submit'>Go</button>
+
+		</form>
+	</div>
+
+
+</body>
+</html>

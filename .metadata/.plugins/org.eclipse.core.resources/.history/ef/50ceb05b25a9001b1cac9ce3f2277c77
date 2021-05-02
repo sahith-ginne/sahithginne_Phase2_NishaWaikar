@@ -1,0 +1,68 @@
+package Flyawayservlet;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Flyaway.Flyaway;
+import Flyawaydao.FlyawayDao;
+
+/**
+ * Servlet implementation class Flyawayservlet
+ */
+//@WebServlet("/register")
+public class Flyawayservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	  private FlyawayDao flyawayDao= new FlyawayDao();
+
+	
+	
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		RequestDispatcher dispacher= request.getRequestDispatcher("/Flyaway/WebContent/Home.jsp");
+		dispacher.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String Airlines = request.getParameter("airlines");
+        String Arival = request.getParameter("arival");
+        String Departure = request.getParameter("departure");
+        String Economy = request.getParameter("economy");
+        
+        
+        Flyaway flights = new Flyaway();
+        flights.setAirlines(Airlines);
+        flights.setArival(Arival);
+        flights.setDeparture(Departure);
+        flights.setEconomy(Economy);
+        
+
+        try {
+            FlyawayDao.registerFlyaway(flights);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        RequestDispatcher dispacher= request.getRequestDispatcher("/Flyaway/WebContent/PassengerDetails.jsp");
+		dispacher.forward(request, response);
+	}
+
+}
+          

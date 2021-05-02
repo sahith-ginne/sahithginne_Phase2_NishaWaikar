@@ -1,0 +1,13 @@
+package Flyawaydao;
+
+import Flyawaydto.Flyaway;
+
+public interface FlyawayDao {
+
+	public boolean addFlyaway(Flyaway flyaway);
+	public boolean updateFlyaway(String Airlines, String Arival, )
+	public boolean updateStudent(int rollNo, char grade);
+	public boolean deleteStudent(int rollNo);
+	public Student searchStudent(int rollNo);
+	public Set<Student> getAllStudents();
+}

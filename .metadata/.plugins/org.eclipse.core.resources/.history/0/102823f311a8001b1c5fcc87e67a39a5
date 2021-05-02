@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+      <label for="uname"><b>Airways</b></label>
+      <input type="text" placeholder="Airways" name="uname" required> <br><br>
+
+      <label for="uname"><b>From</b></label>
+      <input type="text" placeholder="" name="uname" required>
+
+      <label for="email"><b>To</b></label>
+      <input type="text" placeholder="" name="email" required>
+      
+      <label for ="date"><b>Departure</b></label>
+      <input type="date" placeholder="Departure" id="date">
+
+
+      <label for="Class"><b>Class</b></label>
+      <input type="text" placeholder="" name="Class" required>
+      
+      <label for=""><b>Travellers</b></label>
+      <input type="text" placeholder="Travellers" name="" required>
+      
+        
+      <button type="submit">Signup</button>
+  </form>
+</div>
+
+</body>
+</html>

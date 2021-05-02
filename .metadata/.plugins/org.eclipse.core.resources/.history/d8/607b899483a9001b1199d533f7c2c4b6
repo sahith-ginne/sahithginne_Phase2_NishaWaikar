@@ -1,0 +1,5 @@
+package Databaseconnection;
+
+public interface ConnectionManager {
+
+}

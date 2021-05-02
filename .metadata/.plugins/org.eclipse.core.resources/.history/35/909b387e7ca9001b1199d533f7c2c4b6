@@ -1,0 +1,10 @@
+package Flyawaydao;
+
+public interface FlyawayDao {
+
+	public boolean add
+	public boolean updateStudent(int rollNo, char grade);
+	public boolean deleteStudent(int rollNo);
+	public Student searchStudent(int rollNo);
+	public Set<Student> getAllStudents();
+}

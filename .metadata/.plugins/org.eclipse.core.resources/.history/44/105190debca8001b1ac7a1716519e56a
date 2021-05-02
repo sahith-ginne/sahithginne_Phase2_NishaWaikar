@@ -1,0 +1,58 @@
+package com.dto;
+
+public class flights {
+
+	private String airlines;
+	private String Arival;
+	private String Departure;
+	private String city;
+	
+	public flights() {}
+
+	public flights(String airlines, String Arival, String Departure, String city) {
+		this.airlines = airlines;
+		this.Arival = Arival;
+		this.Departure = Departure;
+		this.city = city;
+	}
+
+	public String getairlines() {
+		return airlines;
+	}
+
+	public void setairlines(String airlines) {
+		this.airlines = airlines;
+	}
+
+	public String getArival() {
+		return Arival;
+	}
+
+	public void setArival(String Arival) {
+		this.Arival = Arival;
+	}
+
+	public String getDeparture() {
+		return Departure;
+	}
+
+	public void setDeparture(String Departure) {
+		this.Departure = Departure;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@Override
+	public String toString() {
+		return "flights [airlines=" + airlines + ", Ariva=" + Arival + ", Departure=" + Departure + ", city=" + city + "]";
+	}
+	
+	
+	
+}

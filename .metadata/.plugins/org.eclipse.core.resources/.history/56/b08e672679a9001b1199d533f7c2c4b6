@@ -1,0 +1,5 @@
+package Flyawaydao;
+
+public interface FlyawayDao {
+
+}
